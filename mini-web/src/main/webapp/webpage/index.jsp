@@ -50,7 +50,7 @@
                 </div>
                 <label  class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="path" value="${path}" />
+                    <input type="text" class="form-control" name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
             <div class="form-group">
@@ -60,7 +60,7 @@
                 </div>
                 <label  class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control"  name="path" value="${path}" />
+                    <input type="text" class="form-control"  name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
             <div class="form-group">
@@ -70,7 +70,7 @@
                 </div>
                 <label class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control"  name="path" value="${path}" />
+                    <input type="text" class="form-control"  name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
             <div class="form-group">
@@ -80,7 +80,7 @@
                 </div>
                 <label class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="path" value="${path}" />
+                    <input type="text" class="form-control" name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
             <div class="form-group">
@@ -90,7 +90,7 @@
                 </div>
                 <label class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="path" value="${path}" />
+                    <input type="text" class="form-control" name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
             <div class="form-group">
@@ -100,7 +100,7 @@
                 </div>
                 <label class="col-sm-2 control-label">存放路径</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="path" value="${path}" />
+                    <input type="text" class="form-control" name="path" value="${path}" placeholder="/Users/twg/workspace/mini/mini-web"/>
                 </div>
             </div>
 
