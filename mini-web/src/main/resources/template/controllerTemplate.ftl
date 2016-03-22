@@ -19,8 +19,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.ui.Model;
 import ${bussPackage}.web.common.BaseController;
 import ${bussPackage}.web.common.Result;
-import ${bussPackage}.entity.${entityPackage}.${entityName};
-import ${bussPackage}.biz.${entityPackage}.${entityName}Service;
+import ${bussPackage}.entity.${entityPackage}.${entityName?cap_first};
+import ${bussPackage}.biz.${entityPackage}.${entityName?cap_first}Service;
 import com.google.common.collect.Lists;
 
 /**   
@@ -31,10 +31,10 @@ import com.google.common.collect.Lists;
  */
 @Controller
 @RequestMapping("/${entityName?uncap_first}/func")
-public class ${entityName}Controller extends BaseController {
+public class ${entityName?cap_first}Controller extends BaseController {
 
 	@Autowired
-	private ${entityName}Service ${entityName?uncap_first}Service;
+	private ${entityName?cap_first}Service ${entityName?uncap_first}Service;
 
 
 	/**

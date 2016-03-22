@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="${bussPackage}.dao.${entityPackage}.${entityName}Dao">
+<mapper namespace="${bussPackage}.dao.${entityPackage}.${entityName?cap_first}Dao">
     <!-- Result Map -->
-    <resultMap id="BaseResultMap" type="${bussPackage}.entity.${entityPackage}.${entityName}">
+    <resultMap id="BaseResultMap" type="${bussPackage}.entity.${entityPackage}.${entityName?cap_first}">
     <#list columnData as item>
         <result column="${item.columnName}" property="${item.columnNameByHump}"/>
     </#list>

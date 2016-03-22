@@ -35,7 +35,7 @@ public class CodeGenerateFactory implements CodeGenerate {
     }
 
     public void generate(String tableName, String bussPackage, String entityPackage, String entityDescription, JdbcTemplate jdbcTemplate, String dbType, String[] templates,String[] paths) throws IOException {
-        String entityName = StringUtil.underlineToCamelhump(StringUtil.formatStringRemoveFirst(tableName,"_"));
+        String entityName = StringUtil.underlineToCamelhumpToUpperCase(StringUtil.formatStringRemoveFirst(tableName,"_"));
         String projectPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 
         StringBuilder filePath = new StringBuilder(projectPath);

@@ -12,7 +12,7 @@ public class FiledType {
 	 */
 	public static String getType(String type){
     	type=type.toLowerCase();
-    	if(type.contains("char")){
+    	if(type.contains("char") || type.equals("text")){
 			return "String";
 		}else if(type.startsWith("int")||type.startsWith("tinyint")){
 			return "Integer";

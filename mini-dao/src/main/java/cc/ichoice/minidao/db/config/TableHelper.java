@@ -31,7 +31,7 @@ public class TableHelper {
 	@SuppressWarnings("unchecked")
 	public static String getFields(String tableName,JdbcTemplate jdbcTemplate,String dbType){
     	List<ColumnData> dataList = null;
-    	if(null != columData && columData.size()>0){
+    	if(null != columData && columData.size()>0 && null != columData.get(tableName)){
     		dataList = (List<ColumnData>) columData.get(tableName);
     	}else{
     		dataList = getColumnDatas(tableName,jdbcTemplate,dbType);
@@ -54,8 +54,11 @@ public class TableHelper {
 	        }
 			String maxChar=name.substring(0, 1).toUpperCase();
 			if(null!= defaultValue){
-				str.append("\r\t").append("private ").append(type+" ").append(name).append(" = ").append(type+".valueOf(\"").append(defaultValue).append("\")").append(";//   ").append(comment);
-				
+                if(type.equals("BigDecimal")){
+                    str.append("\r\t").append("private ").append(type+" ").append(name).append(" = ").append(type+".ZERO").append(";//   ").append(comment);
+                }else{
+                    str.append("\r\t").append("private ").append(type+" ").append(name).append(" = ").append(type+".valueOf(\"").append(defaultValue).append("\")").append(";//   ").append(comment);
+                }
 			}else{
 				str.append("\r\t").append("private ").append(type+" ").append(name).append(";//   ").append(comment);
 			}

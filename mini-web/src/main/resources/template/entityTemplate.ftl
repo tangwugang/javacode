@@ -14,7 +14,7 @@ import ${bussPackage}.entity.base.BaseEntity;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ${entityName} extends BaseEntity{
+public class ${entityName?cap_first} extends BaseEntity{
 	${fields}
 
 }

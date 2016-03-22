@@ -1,5 +1,6 @@
 package cc.ichoice2.web.buss.model;
 
+import cc.ichoice.minidao.db.annotation.Column;
 import cc.ichoice.minidao.db.annotation.Entity;
 import cc.ichoice.minidao.db.annotation.Table;
 
@@ -16,7 +17,7 @@ public class Demo {
 	private String updateBy;//更新者
 	private String updateName;//更新者名
 	
-	
+	@Column(value = "name")
 	private String userName;//   用户名
 	private String realName;//   真实姓名
 	private String userKey;//   用户验证唯一标示

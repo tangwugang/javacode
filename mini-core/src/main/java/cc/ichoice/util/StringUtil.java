@@ -99,6 +99,21 @@ public class StringUtil extends StringUtils{
     }
 
     /**
+     * 将下划线风格替换为驼峰风格
+     */
+    public static String underlineToCamelhumpToUpperCase(String str) {
+        Matcher matcher = Pattern.compile("_[a-z]").matcher(str);
+        StringBuilder builder = new StringBuilder(str);
+        for (int i = 0; matcher.find(); i++) {
+            builder.replace(matcher.start() - i, matcher.end() - i, matcher.group().substring(1).toUpperCase());
+        }
+        if (Character.isLowerCase(builder.charAt(0))) {
+            builder.replace(0, 1, String.valueOf(Character.toUpperCase(builder.charAt(0))));
+        }
+        return builder.toString();
+    }
+
+    /**
      * 格式化字符串，去除第一个
      */
     public static String formatStringRemoveFirst(String str,String separator){
@@ -168,4 +183,5 @@ public class StringUtil extends StringUtils{
         }
         return displayName;
     }
+
 }
